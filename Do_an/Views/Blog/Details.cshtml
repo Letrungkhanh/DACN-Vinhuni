@@ -1,0 +1,101 @@
+﻿@model TbBlog
+<!-- Start Hero Section -->
+
+<!-- End Hero Section -->
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 ftco-animate">
+                <!-- Tiêu đề -->
+                <h2 class="mb-4 text-primary fw-bold">@Model.Title</h2>
+
+                <!-- Hình ảnh -->
+                @if (!string.IsNullOrEmpty(Model.Image))
+                {
+                    <div class="mb-4 text-center">
+                        <img src="@Model.Image" alt="Ảnh sản phẩm" class="img-fluid rounded shadow" style="max-height: 400px; object-fit: cover;">
+                    </div>
+                }
+
+                <!-- Mô tả ngắn -->
+                @if (!string.IsNullOrWhiteSpace(Model.Description))
+                {
+                    <p class="lead text-justify" style="font-size: 1.1rem;">
+                        @Model.Description
+                    </p>
+                }
+
+            <h4>Bình luận</h4>
+
+            @if (Model == null)
+            {
+                <p style="color:red;">Model null</p>
+            }
+            else if (Model.TbBlogComments == null)
+            {
+                <p style="color:red;">Comments null</p>
+            }
+            else if (!Model.TbBlogComments.Any())
+            {
+                <p style="color:orange;">Không có bình luận nào</p>
+            }
+            else
+            {
+                <p style="color:green;">Có @Model.TbBlogComments.Count() bình luận</p>
+                @foreach (var c in Model.TbBlogComments.OrderByDescending(x => x.CreatedDate))
+                {
+                    <div class="d-flex mb-4 pb-4 border-bottom">
+                        <div class="flex-shrink-0 me-3">
+                            <img src="https://ui-avatars.com/api/?name=@Uri.EscapeDataString(c.Name ?? "User")&background=0D8ABC&color=fff&size=64"
+                                 alt="avatar" class="rounded-circle" width="64" height="64" />
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1 text-primary fw-bold">@c.Name</h6>
+                            <small class="text-muted">@c.Email - @c.CreatedDate?.ToString("dd/MM/yyyy HH:mm")</small>
+                            <p class="mt-2 mb-0">@c.Detail</p>
+                        </div>
+                    </div>
+                }
+            }
+    
+
+                <div class="pt-5 mt-5">
+                    
+                    <!-- END comment-list -->
+
+                    <div class="comment-form-wrap pt-5">
+                        <h3 class="mb-5">Leave a comment</h3>
+                        <form asp-action="AddComment" asp-controller="Blog" method="post" class="p-5 bg-light">
+                            <input type="hidden" name="BlogId" value="@Model.BlogId" />
+
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" class="form-control" id="name" name="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Phone *</label>
+                            <input type="text" class="form-control" id="phone" name="Phone" required>
+                        </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" class="form-control" id="email" name="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="Detail" cols="30" rows="10" class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                  
+
+
+                </div>
+          
+           </div>
+        </div>
+    </div>
+</section
+> <!-- .section -->

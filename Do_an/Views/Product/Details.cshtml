@@ -1,0 +1,160 @@
+﻿@model TbProduct
+@{
+    double avgRating = Model.TbProductReviews?.Average(r => (double?)r.Star) ?? 0;
+    int fullStars = (int)Math.Floor(avgRating);
+    int emptyStars = 5 - fullStars;
+}
+<!-- Banner -->
+
+
+<!-- Product Detail -->
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <!-- Product Image -->
+            <div class="col-md-6 mb-4">
+                <img src="@(!string.IsNullOrEmpty(Model.Image) ? Url.Content(Model.Image) : Url.Content("~/images/default.jpg"))"
+                     class="img-fluid rounded" alt="@Model.Title" />
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-md-6">
+                <h2>@Model.Title</h2>
+                <div class="mb-2">
+                    @for (int i = 0; i < fullStars; i++)
+                    {
+                        <i class="fa fa-star text-warning"></i>
+                    }
+                    @for (int i = 0; i < emptyStars; i++)
+                    {
+                        <i class="fa fa-star text-secondary"></i>
+                    }
+                    <span class="text-muted">(@String.Format("{0:0.0}", avgRating) sao)</span>
+                </div>
+                <h4 class="text-primary">$@Model.Price.00</h4>
+                <p class="text-muted">Sản phẩm chất lượng cao, đóng gói cẩn thận và giao hàng nhanh chóng.</p>
+
+                <!-- Add to Cart Form -->
+                <form method="post" asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.ProductId">
+                    <div class="input-group mb-3" style="max-width: 200px;">
+                        <button class="btn btn-outline-secondary" type="button" id="quantity-minus">
+                            <i class="ion-ios-remove"></i>
+                        </button>
+                        <input type="text" name="quantity" id="quantity" class="form-control text-center" value="1" pattern="[0-9]*" inputmode="numeric" />
+                        <button class="btn btn-outline-secondary" type="button" id="quantity-plus">
+                            <i class="ion-ios-add"></i>
+                        </button>
+                    </div>
+                    <button type="submit" class="btn btn-dark px-4">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+        <hr class="mt-5" />
+
+        <!-- Bình luận -->
+
+        <h4>Bình luận</h4>
+
+        @if (Model == null)
+        {
+            <p style="color:red;">Model null</p>
+        }
+        else if (Model.TbProductReviews == null)
+        {
+            <p style="color:red;">Comments null</p>
+        }
+        else if (!Model.TbProductReviews.Any())
+        {
+            <p style="color:orange;">Không có bình luận nào</p>
+        }
+        else
+        {
+            <p style="color:green;">Có @Model.TbProductReviews.Count() bình luận</p>
+            @foreach (var c in Model.TbProductReviews.OrderByDescending(x => x.CreatedDate))
+            {
+                <div class="d-flex mb-4 pb-4 border-bottom">
+                    <div class="flex-shrink-0 me-3">
+                        <img src="https://ui-avatars.com/api/?name=@Uri.EscapeDataString(c.Name ?? "User")&background=0D8ABC&color=fff&size=64"
+                             alt="avatar" class="rounded-circle" width="64" height="64" />
+                    </div>
+                    <div class="flex-grow-1">
+                        <h6 class="mb-1 text-primary fw-bold">@c.Name</h6>
+                        <small class="text-muted">@c.Email - @c.CreatedDate?.ToString("dd/MM/yyyy HH:mm")</small>
+                        <p class="mt-2 mb-0">@c.Detail</p>
+                    </div>
+                    <div>
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            if (i <= (c.Star ?? 0))
+                            {
+                                <i class="fa fa-star text-warning"></i>
+                            }
+                            else
+                            {
+                                <i class="fa fa-star text-secondary"></i>
+                            }
+                        }
+                    </div>
+
+                </div>
+            }
+        }
+
+        <div class="comment-form-wrap pt-5">
+            <h3 class="mb-5">Leave a comment</h3>
+            <form asp-action="AddComment" asp-controller="Product" method="post" class="p-5 bg-light">
+                <input type="hidden" name="ProductId" value="@Model.ProductId" />
+
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" class="form-control" id="name" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Phone *</label>
+                    <input type="text" class="form-control" id="phone" name="Phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" class="form-control" id="email" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="Detail" cols="30" rows="10" class="form-control" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="star">Đánh giá *</label>
+                    <select id="star" name="Star" class="form-control" required>
+                        <option value="5">★★★★★ - Tuyệt vời</option>
+                        <option value="4">★★★★☆ - Tốt</option>
+                        <option value="3">★★★☆☆ - Trung bình</option>
+                        <option value="2">★★☆☆☆ - Tệ</option>
+                        <option value="1">★☆☆☆☆ - Rất tệ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<!-- Related Products -->
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const input = document.getElementById('quantity');
+            document.getElementById('quantity-minus').addEventListener('click', function () {
+                let value = parseInt(input.value) || 1;
+                if (value > 1) input.value = value - 1;
+            });
+
+            document.getElementById('quantity-plus').addEventListener('click', function () {
+                let value = parseInt(input.value) || 1;
+                input.value = value + 1;
+            });
+        });
+    </script>
+}

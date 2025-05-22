@@ -1,0 +1,93 @@
+﻿@model List<Do_an.ViewModel.CartItem>
+
+@{
+    ViewData["Title"] = "Thanh toán";
+}
+
+<div class="untree_co-section">
+    <div class="container">
+        <form asp-action="CheckoutConfirm" asp-controller="Cart" method="post">
+            <div class="row">
+                <!-- Form thông tin khách hàng -->
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <h2 class="h3 mb-3 text-black">Chi tiết thanh toán</h2>
+                    <div class="p-3 p-lg-5 border bg-white">
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label for="CustomerName" class="text-black">Họ tên</label>
+                                <input type="text" class="form-control" id="CustomerName" name="CustomerName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label for="Address" class="text-black">Địa chỉ <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="Address" name="Address" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <div class="col-md-6">
+                                <label for="Phone" class="text-black">Điện thoại <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="Phone" name="Phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Note" class="text-black">Ghi chú</label>
+                            <textarea name="Note" id="Note" cols="30" rows="5" class="form-control" placeholder="Ghi chú đơn hàng..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thông tin giỏ hàng -->
+                <div class="col-md-6">
+                    <div class="p-3 p-lg-5 border bg-white">
+                        <h2 class="h3 mb-3 text-black">Đơn hàng của bạn</h2>
+                        <table class="table site-block-order-table mb-5">
+                            <thead>
+                                <tr>
+                                    <th>Sản phẩm</th>
+                                    <th>Tổng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.TenHH <strong class="mx-2">x</strong> @item.SoLuong</td>
+                                        <td>@String.Format("{0:N0}", item.ThanhTien) ₫</td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td class="text-black font-weight-bold"><strong>Tổng cộng</strong></td>
+                                    <td class="text-black font-weight-bold"><strong>@String.Format("{0:N0}", Model.Sum(p => p.ThanhTien)) ₫</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-black btn-lg py-3 btn-block">Đặt hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $('#checkoutForm').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: '/Cart/CheckoutConfirm',
+            data: $(this).serialize(),
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+                    window.location.href = '/'; // chuyển về trang chủ
+                }
+            }
+        });
+    });
+</script>
