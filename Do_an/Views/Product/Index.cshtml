@@ -1,31 +1,29 @@
 ﻿@model IEnumerable<Do_an.Models.TbProduct>
 <!-- Start Hero Section -->
-
 <!-- End Hero Section -->
 <div class="untree_co-section product-section before-footer-section">
-	<div class="container">
-		<div class="row">
-			@foreach (var items in Model)
-			{
-				string sUrl = $"/product/{items.Alias}-{items.ProductId}.html";
-				<!-- Start Column 1 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5">
-					<a href="@sUrl"  class="product-item">
-					<img  src="@items.Image" class="img-fluid product-thumbnail">
-					<h3 class="product-title">@items.Title</h3>
-					<strong class="product-price">$@items.Price.00</strong>
-					</a>
-					
-					<span class="icon-cross">
-							<img src="images/cross.svg" class="img-fluid">
-					</span>
-			 
-			</div>
-			}
-			<!-- End Column 1 -->
-			
-			<!-- End Column 4 -->
+    <div class="container">
+        <div class="row">
+            @foreach (var items in Model)
+            {
+                string sUrl = $"/product/{items.Alias}-{items.ProductId}.html";
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5">
+                    <div class="product-item text-center position-relative">
+                        <a href="@sUrl" style="text-decoration: none;">
+                            <img src="@items.Image" class="img-fluid product-thumbnail mb-3" alt="@items.Title" />
+                            <h3 class="product-title">@items.Title</h3>
+                            <strong class="product-price">@String.Format("{0:N0}", items.Price)₫</strong>
+                        </a>
 
-		</div>
-	</div>
+                        <!-- Icon dấu cộng ở góc dưới phải -->
+                        <span class="icon-cross position-absolute bottom-0 end-0 m-2">
+                            <img src="/images/cross.svg" class="img-fluid" alt="icon">
+                        </span>
+                    </div>
+                </div>
+
+                <!-- End Product Column -->
+            }
+        </div>
+    </div>
 </div>

@@ -83,7 +83,6 @@ namespace Do_an.Controllers
 
             return View(cartItems);
         }
-
         [HttpPost]
         public IActionResult CheckoutConfirm(string CustomerName, string Phone, string Address, string Note)
         {
@@ -94,6 +93,31 @@ namespace Do_an.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
+            List<string> errors = new List<string>();
+
+            // === KIỂM TRA SỐ LƯỢNG TỒN KHO ===
+            foreach (var item in cartItems)
+            {
+                var product = _context.TbProducts.FirstOrDefault(p => p.ProductId == item.Mahh);
+                if (product == null)
+                {
+                    errors.Add($"❌ Sản phẩm ID {item.Mahh} không tồn tại.");
+                    continue;
+                }
+
+                if (product.Quantity < item.SoLuong)
+                {
+                    errors.Add($"❌ <strong>{product.Title}</strong> chỉ còn <strong>{product.Quantity}</strong> sản phẩm, bạn đã đặt <strong>{item.SoLuong}</strong>.");
+                }
+            }
+
+            if (errors.Any())
+            {
+                ViewBag.Errors = errors;
+                return View("Checkout", cartItems);
+            }
+
+            // === NẾU ĐỦ HÀNG THÌ TIẾP TỤC ===
             string orderCode = "DH" + DateTime.Now.ToString("yyyyMMddHHmmss");
 
             var order = new TbOrder
@@ -102,6 +126,7 @@ namespace Do_an.Controllers
                 CustomerName = CustomerName,
                 Phone = Phone,
                 Address = Address,
+                
                 TotalAmount = cartItems.Sum(x => (int)x.ThanhTien),
                 Quanlity = cartItems.Sum(x => x.SoLuong),
                 OrderStatusId = 1,
@@ -116,23 +141,29 @@ namespace Do_an.Controllers
 
             foreach (var item in cartItems)
             {
+                var product = _context.TbProducts.First(p => p.ProductId == item.Mahh);
+
                 var orderDetail = new TbOrderDetail
                 {
                     OrderId = orderId,
-                    ProductId = item.Product.ProductId,
-                    Price = item.Product.Price,
+                    ProductId = item.Mahh,
+                    Price = product.Price,
                     Quantity = item.SoLuong
                 };
+
                 _context.TbOrderDetails.Add(orderDetail);
+
+                // CẬP NHẬT LẠI SỐ LƯỢNG KHO
+                product.Quantity -= item.SoLuong;
             }
 
             _context.SaveChanges();
 
-            // Xóa giỏ hàng trong session sau khi đặt hàng xong
             HttpContext.Session.Remove(CART_KEY);
 
             return RedirectToAction("Thankyou");
         }
+
 
         public IActionResult Thankyou()
         {

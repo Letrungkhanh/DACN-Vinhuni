@@ -6,6 +6,21 @@
 
 <div class="untree_co-section">
     <div class="container">
+
+        <!-- Hiển thị lỗi nếu có -->
+        @if (ViewBag.Errors != null)
+        {
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach (var error in (List<string>)ViewBag.Errors)
+                    {
+                        <li>@Html.Raw(error)</li>
+                    }
+                </ul>
+                <a href="@Url.Action("Index", "Cart")" class="btn btn-warning mt-2">🛒 Quay lại giỏ hàng</a>
+            </div>
+        }
+
         <form asp-action="CheckoutConfirm" asp-controller="Cart" method="post">
             <div class="row">
                 <!-- Form thông tin khách hàng -->
@@ -75,19 +90,3 @@
         </form>
     </div>
 </div>
-<script>
-    $('#checkoutForm').submit(function (e) {
-        e.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: '/Cart/CheckoutConfirm',
-            data: $(this).serialize(),
-            success: function (response) {
-                if (response.success) {
-                    alert(response.message);
-                    window.location.href = '/'; // chuyển về trang chủ
-                }
-            }
-        });
-    });
-</script>

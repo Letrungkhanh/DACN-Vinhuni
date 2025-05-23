@@ -7,7 +7,7 @@
 		<a href="@sUrl" class="product-item">
 			<img src="@item.Image" class="img-fluid product-thumbnail">
 			<h3 class="product-title">@item.Title</h3>
-			<strong class="product-price">$@item.Price.00</strong>
+			<strong class="product-price"> @String.Format("{0:N0}", item.Price)₫</strong>
 
 			<span class="icon-cross">
 				<img src="~/images/cross.svg" class="img-fluid">

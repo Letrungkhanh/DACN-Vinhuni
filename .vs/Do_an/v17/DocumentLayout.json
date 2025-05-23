@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\Do_an\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\views\\shared\\components\\product\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\views\\shared\\components\\product\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\models\\tborderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\models\\tborderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\models\\tborder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\models\\tborder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "Do_an\\Views\\Cart\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "Do_an\\Views\\Cart\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Shared\\Components\\Product\\Default.cshtml",
+              "RelativeDocumentMoniker": "Do_an\\Views\\Shared\\Components\\Product\\Default.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Shared\\Components\\Product\\Default.cshtml",
+              "RelativeToolTip": "Do_an\\Views\\Shared\\Components\\Product\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-22T17:07:47.87Z",
+              "WhenOpened": "2025-05-23T03:18:40.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Do_an\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Do_an\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAiwDkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T17:02:16.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Product\\Details.cshtml",
-              "RelativeDocumentMoniker": "Do_an\\Views\\Product\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Product\\Details.cshtml",
-              "RelativeToolTip": "Do_an\\Views\\Product\\Details.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-22T17:01:41.665Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Do_an\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Do_an\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAYwFIAAABHAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Do_an\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Do_an\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-22T15:45:19.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TbOrderDetail.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Models\\TbOrderDetail.cs",
-              "RelativeDocumentMoniker": "Do_an\\Models\\TbOrderDetail.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Models\\TbOrderDetail.cs",
-              "RelativeToolTip": "Do_an\\Models\\TbOrderDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T15:43:37.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TbOrder.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Models\\TbOrder.cs",
-              "RelativeDocumentMoniker": "Do_an\\Models\\TbOrder.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Models\\TbOrder.cs",
-              "RelativeToolTip": "Do_an\\Models\\TbOrder.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAkwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T15:43:26.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Do_an\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Do_an\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAuwDUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T15:41:46.681Z",
+              "WhenOpened": "2025-05-23T03:18:13.411Z",
               "EditorCaption": ""
             }
           ]
