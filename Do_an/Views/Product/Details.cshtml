@@ -15,6 +15,7 @@
             <div class="col-md-6 mb-4">
                 <img src="@(!string.IsNullOrEmpty(Model.Image) ? Url.Content(Model.Image) : Url.Content("~/images/default.jpg"))"
                      class="img-fluid rounded" alt="@Model.Title" />
+                    
             </div>
 
             <!-- Product Info -->
@@ -31,7 +32,8 @@
                     }
                     <span class="text-muted">(@String.Format("{0:0.0}", avgRating) sao)</span>
                 </div>
-                <h4 class="text-primary">@Model.Price ₫</h4>
+                <h4 class="text-primary">@String.Format("{0:N0}", Model.Price)₫</h4>
+                <h5>Số lượng còn trên cửa hàng @Model.Quantity sản phẩm</h5>
                 <p class="text-muted">Sản phẩm chất lượng cao, đóng gói cẩn thận và giao hàng nhanh chóng.</p>
 
                 <!-- Add to Cart Form -->

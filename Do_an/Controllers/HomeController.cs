@@ -17,12 +17,11 @@ namespace Do_an.Controllers
 		}
 
 		public IActionResult Index()
-
 		{
-			//if(!Functions.IsLogin())
-   //             return RedirectToAction("Index", "LoginKH");
-            //var products = _context.TbProducts.OrderBy(p => Guid.NewGuid()).Take(3).ToList();
-            return View();
+			if (!Functions.IsLogin())
+				return RedirectToAction("Index", "LoginKH");
+			//var products = _context.TbProducts.OrderBy(p => Guid.NewGuid()).Take(3).ToList();
+			return View();
 		}
 
 		public IActionResult Privacy()

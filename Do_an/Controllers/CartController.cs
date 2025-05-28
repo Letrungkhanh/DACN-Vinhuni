@@ -22,8 +22,8 @@ namespace Do_an.Controllers
 
         public IActionResult Index()
         {
-            if (!Functions.IsLogin())
-                return RedirectToAction("Index", "LoginKH");
+            //if (!Functions.IsLogin())
+            //    return RedirectToAction("Index", "LoginKH");
 
             return View(Carts);
         }
@@ -84,9 +84,10 @@ namespace Do_an.Controllers
             return View(cartItems);
         }
         [HttpPost]
-        public IActionResult CheckoutConfirm(string CustomerName, string Phone, string Address, string Note)
+        public IActionResult CheckoutConfirm(string CustomerName, string Phone, string Address, string Note, int OrderStatusId)
         {
             var cartItems = Carts;
+
 
             if (cartItems == null || !cartItems.Any())
             {
@@ -95,7 +96,7 @@ namespace Do_an.Controllers
 
             List<string> errors = new List<string>();
 
-            // === KIỂM TRA SỐ LƯỢNG TỒN KHO ===
+            // Kiểm tra tồn kho
             foreach (var item in cartItems)
             {
                 var product = _context.TbProducts.FirstOrDefault(p => p.ProductId == item.Mahh);
@@ -117,7 +118,13 @@ namespace Do_an.Controllers
                 return View("Checkout", cartItems);
             }
 
-            // === NẾU ĐỦ HÀNG THÌ TIẾP TỤC ===
+            var accountid = HttpContext.Session.GetInt32("UserID");
+
+            if (accountid == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+            // Tạo đơn hàng
             string orderCode = "DH" + DateTime.Now.ToString("yyyyMMddHHmmss");
 
             var order = new TbOrder
@@ -126,12 +133,13 @@ namespace Do_an.Controllers
                 CustomerName = CustomerName,
                 Phone = Phone,
                 Address = Address,
-                
                 TotalAmount = cartItems.Sum(x => (int)x.ThanhTien),
                 Quanlity = cartItems.Sum(x => x.SoLuong),
-                OrderStatusId = 1,
+                OrderStatusId = OrderStatusId, // Lưu trạng thái/thanh toán ở đây
                 CreatedDate = DateTime.Now,
-                CreatedBy = "Customer"
+                CreatedBy = "Customer",
+                AccountId = accountid
+               
             };
 
             _context.TbOrders.Add(order);
@@ -153,16 +161,16 @@ namespace Do_an.Controllers
 
                 _context.TbOrderDetails.Add(orderDetail);
 
-                // CẬP NHẬT LẠI SỐ LƯỢNG KHO
+                // Trừ tồn kho
                 product.Quantity -= item.SoLuong;
             }
 
             _context.SaveChanges();
-
             HttpContext.Session.Remove(CART_KEY);
 
             return RedirectToAction("Thankyou");
         }
+
 
 
         public IActionResult Thankyou()

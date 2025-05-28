@@ -1,6 +1,6 @@
-﻿@{
-    var bestSellers = ViewBag.BestSellers as IEnumerable<dynamic>;
-}
+﻿    @{
+        var bestSellers = ViewBag.BestSellers as IEnumerable<dynamic>;
+    }
 <section class="content" style="padding-left:250px">
     <div class="container-fluid">
         <div class="row">
@@ -32,33 +32,33 @@
                 </div>
             </div>
 
-            <!-- Tổng đơn hàng -->
-            <div class="col-md-6 col-xl-3 mb-4">
-                <div class="small-box bg-success">
-                    <div class="inner">
-                        <h3>@String.Format("{0:N0}", ViewBag.TotalOrder ?? 0)</h3>
-                        <p>Tổng đơn hàng</p>
+                <!-- Tổng đơn hàng -->
+                <div class="col-md-6 col-xl-3 mb-4">
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>@String.Format("{0:N0}", ViewBag.TotalOrder ?? 0)</h3>
+                            <p>Tổng đơn hàng</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <a href="/Admin/Orders" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
-                    <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <a href="/Admin/Orders" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-            </div>
 
-            <!-- Tổng sản phẩm -->
-            <div class="col-md-6 col-xl-3 mb-4">
-                <div class="small-box bg-warning">
-                    <div class="inner">
-                        <h3>@String.Format("{0:N0}", ViewBag.TotalProduct ?? 0)</h3>
-                        <p>Tổng sản phẩm</p>
+                <!-- Tổng sản phẩm -->
+                <div class="col-md-6 col-xl-3 mb-4">
+                    <div class="small-box bg-warning">
+                        <div class="inner">
+                            <h3>@String.Format("{0:N0}", ViewBag.TotalProduct ?? 0)</h3>
+                            <p>Tổng sản phẩm</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <a href="/Admin/Products" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
-                    <div class="icon">
-                        <i class="fas fa-box-open"></i>
-                    </div>
-                    <a href="/Admin/Products" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-            </div>
 
             
 

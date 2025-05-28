@@ -47,13 +47,13 @@
 					</li>
 					<li><a class="nav-link" asp-action="index" asp-controller="Product">Sản phẩm</a></li>
 					<li><a class="nav-link" href="#">Về chúng tôi</a></li>
-					<li><a class="nav-link" href="#">Dịch vụ</a></li>
+					<li><a class="nav-link" asp-action="Index" asp-controller="OrderHistory">Lịch sử đặt hàng</a></li>
 					<li><a class="nav-link" asp-action="index" asp-controller="Blog">Bài viết</a></li>
 					<li><a class="nav-link" asp-action="index" asp-controller="Contact">Liên hệ</a></li>
 				</ul>
 
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-					<li><a class="nav-link" asp-action="Index"asp-controller="LoginKH" ><img src="images/user.svg"></a></li>
+					<li><a class="nav-link" asp-action="Index" asp-controller="UserProfile"><img src="images/user.svg"></a></li>
 					<li><a class="nav-link" asp-action="AddToCart" asp-controller="Cart"><img src="images/cart.svg"></a></li>
 					<li>
 						<a class="nav-link" asp-action="Index" asp-controller="LogoutKH" title="Đăng xuất">

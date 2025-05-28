@@ -236,6 +236,9 @@ public partial class QlBhqContext : DbContext
             entity.HasOne(d => d.OrderStatus).WithMany(p => p.TbOrders)
                 .HasForeignKey(d => d.OrderStatusId)
                 .HasConstraintName("FK_tb_Order_tb_OrderStatus");
+            entity.HasOne(d => d.Account).WithMany()
+               .HasForeignKey(d => d.AccountId)
+               .HasConstraintName("FK_tb_Order_tb_Account");
         });
 
         modelBuilder.Entity<TbOrderDetail>(entity =>
@@ -249,6 +252,7 @@ public partial class QlBhqContext : DbContext
             entity.HasOne(d => d.Order).WithMany(p => p.TbOrderDetails)
                 .HasForeignKey(d => d.OrderId)
                 .HasConstraintName("FK_tb_OrderDetail_tb_Order");
+          
         });
 
         modelBuilder.Entity<TbOrderStatus>(entity =>

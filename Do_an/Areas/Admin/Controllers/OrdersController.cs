@@ -144,16 +144,23 @@ namespace Do_an.Areas.Admin.Controllers
         // POST: Admin/Orders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
-            var tbOrder = await _context.TbOrders.FindAsync(id);
-            if (tbOrder != null)
+            var order = _context.TbOrders.FirstOrDefault(o => o.OrderId == id);
+
+            if (order != null)
             {
-                _context.TbOrders.Remove(tbOrder);
+                // Xóa các chi tiết đơn hàng liên quan
+                var orderDetails = _context.TbOrderDetails.Where(d => d.OrderId == id);
+                _context.TbOrderDetails.RemoveRange(orderDetails);
+
+                // Xóa đơn hàng
+                _context.TbOrders.Remove(order);
+
+                _context.SaveChanges();
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
 
         private bool TbOrderExists(int id)
