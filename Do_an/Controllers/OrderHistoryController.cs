@@ -30,6 +30,23 @@ namespace Do_an.Controllers
 
             return View(orders);
         }
+        [HttpPost]
+        public IActionResult CancelOrder(int id)
+        {
+            var order = _context.TbOrders.FirstOrDefault(o => o.OrderId == id && o.AccountId == Functions._UserID);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            // Cho phép hủy bất kỳ lúc nào
+            order.OrderStatusId = 5; // Trạng thái huỷ
+            _context.SaveChanges();
+
+            TempData["Message"] = "Đơn hàng đã được huỷ thành công.";
+            return RedirectToAction("Index");
+        }
+
     }
 }
 

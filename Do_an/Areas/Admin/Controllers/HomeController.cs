@@ -24,7 +24,11 @@ namespace Do_an.Areas.Admin.Controllers
             ViewBag.TongDoanhThu = totalRevenue;
             ViewBag.TotalUsers = _context.TbAccounts.Count();
             ViewBag.TotalProduct = _context.TbProducts.Count();
-            ViewBag.TotalOrder = _context.TbOrders.Count();
+            ViewBag.TotalOrder = _context.TbOrders.Count(); 
+            int cancelledOrders = _context.TbOrders.Count(o => o.OrderStatusId == 4); // 4 là trạng thái huỷ
+
+            ViewBag.CancelledOrders = cancelledOrders;
+
 
             var bestSellers = _context.TbOrderDetails
        .GroupBy(od => od.ProductId)

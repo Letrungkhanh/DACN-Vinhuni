@@ -60,7 +60,18 @@
                     </div>
                 </div>
 
-            
+            <div class="col-md-6 col-xl-3 mb-4">
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3>@String.Format("{0:N0}", ViewBag.CancelledOrders ?? 0)</h3>
+                        <p>Tổng đơn hàng đã huỷ</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <a href="/Admin/Orders" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
 
         </div>
     </div>

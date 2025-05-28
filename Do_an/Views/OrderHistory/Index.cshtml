@@ -5,6 +5,13 @@
 }
 <h2 class="mb-4 fw-bold text-primary"><i class="bi bi-receipt-cutoff me-2"></i>Lịch sử đơn hàng</h2>
 
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+
 @if (!Model.Any())
 {
         <div class="alert alert-warning d-flex align-items-center" role="alert">
@@ -15,7 +22,7 @@
 else
 {
     foreach (var order in Model)
-    {
+    { 
                 <div class="card mb-4 shadow-sm border-0">
                     <div class="card-header bg-primary text-white d-flex flex-column flex-md-row justify-content-between align-items-md-center">
                         <div>
@@ -56,6 +63,24 @@ else
                             </tbody>
                         </table>
                     </div>
+            @if (order.OrderStatusId != 5) // Nếu chưa huỷ thì mới hiển thị nút
+            {
+                <form asp-action="CancelOrder" asp-controller="OrderHistory" method="post" onsubmit="return confirm('Bạn có chắc chắn muốn huỷ đơn hàng này không?');">
+                    <input type="hidden" name="id" value="@order.OrderId" />
+                    <button type="submit" class="btn btn-danger btn-sm mt-2">
+                        <i class="bi bi-x-circle"></i> Huỷ đơn hàng
+                    </button>
+                </form>
+            }
+            else
+            {
+                <div class="alert alert-danger fw-bold text-center fs-5 mt-3" role="alert">
+                    🚫 Đơn hàng đã bị huỷ
+                </div>
+            }
+
+
+
                 </div>
     }
 }

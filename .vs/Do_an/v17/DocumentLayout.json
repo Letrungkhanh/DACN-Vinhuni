@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\Do_an\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\views\\orderhistory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\views\\orderhistory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\views\\userprofile\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\views\\userprofile\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\controllers\\orderhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\controllers\\orderhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\views\\userprofile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\views\\userprofile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\viewmodel\\editprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\viewmodel\\editprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|c:\\users\\administrator\\source\\repos\\do_an\\do_an\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567AEE66-7CE0-4F58-8557-B82A68D723FF}|Do_an\\Do_an.csproj|solutionrelative:do_an\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,67 +42,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\UserProfile\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Do_an\\Views\\UserProfile\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\UserProfile\\Edit.cshtml",
-              "RelativeToolTip": "Do_an\\Views\\UserProfile\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Do_an\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Do_an\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAD8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T04:37:34.974Z",
+              "WhenOpened": "2025-05-28T15:00:09.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Do_an\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Do_an\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T14:56:22.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\UserProfile\\Index.cshtml",
+              "RelativeDocumentMoniker": "Do_an\\Views\\UserProfile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\UserProfile\\Index.cshtml",
+              "RelativeToolTip": "Do_an\\Views\\UserProfile\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T12:51:11.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\UserProfile\\Index.cshtml",
-              "RelativeDocumentMoniker": "Do_an\\Views\\UserProfile\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\UserProfile\\Index.cshtml",
-              "RelativeToolTip": "Do_an\\Views\\UserProfile\\Index.cshtml",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAqwCMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T04:27:25.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\OrderHistory\\Index.cshtml",
               "RelativeDocumentMoniker": "Do_an\\Views\\OrderHistory\\Index.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\OrderHistory\\Index.cshtml",
               "RelativeToolTip": "Do_an\\Views\\OrderHistory\\Index.cshtml",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCAAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T04:27:13.878Z",
+              "WhenOpened": "2025-05-28T12:49:15.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Do_an\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Do_an\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T12:45:14.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EditProfileViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\ViewModel\\EditProfileViewModel.cs",
-              "RelativeDocumentMoniker": "Do_an\\ViewModel\\EditProfileViewModel.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\ViewModel\\EditProfileViewModel.cs",
-              "RelativeToolTip": "Do_an\\ViewModel\\EditProfileViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA9AAAAAAAAAA==",
+              "Title": "OrderHistoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Controllers\\OrderHistoryController.cs",
+              "RelativeDocumentMoniker": "Do_an\\Controllers\\OrderHistoryController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Controllers\\OrderHistoryController.cs",
+              "RelativeToolTip": "Do_an\\Controllers\\OrderHistoryController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAIwCoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T04:25:58.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Controllers\\UserProfileController.cs",
-              "RelativeDocumentMoniker": "Do_an\\Controllers\\UserProfileController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Do_an\\Do_an\\Controllers\\UserProfileController.cs",
-              "RelativeToolTip": "Do_an\\Controllers\\UserProfileController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAIwD8AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T04:23:31.651Z",
+              "WhenOpened": "2025-05-28T12:19:40.975Z",
               "EditorCaption": ""
             }
           ]
